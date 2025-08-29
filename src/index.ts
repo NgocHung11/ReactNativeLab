@@ -7,7 +7,8 @@ import { Book } from "./lab01/bai06";
 import { User } from "./lab01/bai07";
 import { Product } from "./lab01/bai08";
 import { Animal } from "./lab01/bai09";
-
+import { Account } from "./lab01/bai10";
+import { Animal as AnimalClass, Dog, Cat } from "./lab01/bai11";
 //Bai 01: Person class
 const person = new Person("Alice", 30);
 person.displayInfo();
@@ -73,3 +74,30 @@ const dog: Animal = {
 
 console.log(`Animal Name: ${dog.name}`);
 dog.sound();
+
+// Bai 10: Account class
+const account = new Account("123456789", 1000);
+console.log(`Account Number: ${account.accountNumber}`);
+
+// Bai 11: Animal class with Dog and Cat subclasses
+const dog2 = new Dog("Rex");        
+dog2.speak();
+dog2.bark();
+const cat = new Cat("Whiskers");
+cat.speak();    
+cat.meow();     
+
+// Bai 12: Flyable and Swimmable interfaces with Bird and Fish classes
+import { Bird, Fish } from "./lab01/bai12";
+const bird = new Bird();
+bird.fly();             
+const fish = new Fish();
+fish.swim();
+
+// Bai 13 
+import { Square, Circle } from "./lab01/bai13";
+
+const square = new Square(4);
+console.log(`Square area: ${square.area()}`);           
+const circle = new Circle(3);
+console.log(`Circle area: ${circle.area()}`);

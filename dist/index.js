@@ -8,6 +8,8 @@ const bai05_1 = require("./lab01/bai05");
 const bai06_1 = require("./lab01/bai06");
 const bai07_1 = require("./lab01/bai07");
 const bai08_1 = require("./lab01/bai08");
+const bai10_1 = require("./lab01/bai10");
+const bai11_1 = require("./lab01/bai11");
 //Bai 01: Person class
 const person = new bai01_1.Person("Alice", 30);
 person.displayInfo();
@@ -57,3 +59,25 @@ const dog = {
 };
 console.log(`Animal Name: ${dog.name}`);
 dog.sound();
+// Bai 10: Account class
+const account = new bai10_1.Account("123456789", 1000);
+console.log(`Account Number: ${account.accountNumber}`);
+// Bai 11: Animal class with Dog and Cat subclasses
+const dog2 = new bai11_1.Dog("Rex");
+dog2.speak();
+dog2.bark();
+const cat = new bai11_1.Cat("Whiskers");
+cat.speak();
+cat.meow();
+// Bai 12: Flyable and Swimmable interfaces with Bird and Fish classes
+const bai12_1 = require("./lab01/bai12");
+const bird = new bai12_1.Bird();
+bird.fly();
+const fish = new bai12_1.Fish();
+fish.swim();
+// Bai 13 
+const bai13_1 = require("./lab01/bai13");
+const square = new bai13_1.Square(4);
+console.log(`Square area: ${square.area()}`);
+const circle = new bai13_1.Circle(3);
+console.log(`Circle area: ${circle.area()}`);
