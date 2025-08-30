@@ -17,8 +17,13 @@ function addNumber(num : number){
 }
 
 square(2).then((result) => {
-    console.log(result);
-    
-})
+    return doubleNumber(result as number);
+}).then((result) => {
+    return addNumber(result as number);
+}).then((result) => {
+    console.log(result); 
+}).catch((err) => {
+    console.error('Error:', err);
+});
 
 
